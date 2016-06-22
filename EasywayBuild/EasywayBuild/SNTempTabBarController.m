@@ -16,20 +16,17 @@
 @implementation SNTempTabBarController
 
 - (void)viewDidLoad {
-    
-    
+
     // Do any additional setup after loading the view.
     [super viewDidLoad];
 
     self.fullScreenBack = YES;
-    
+
     self.customViewControllers = @[
         [[ViewController alloc] initWithTitle:@"车源" normalIcon:[UIImage imageNamed:@"cy"] seletedIcon:[UIImage imageNamed:@"cy_h"]],
-        [[UIViewController alloc] initWithTitle:@"寻车" normalIcon:[UIColor imageWithString:@"9876AA"] seletedIcon:[UIColor imageWithString:@"987600"]],
-        [[UIViewController alloc] initWithTitle:@"我的" normalIcon:[UIColor imageWithString:@"FF81AC"] seletedIcon:[UIColor imageWithString:@"FF8100"]]
+        [[UIViewController alloc] initWithTitle:@"寻车" normalIcon:[UIImage imageNamed:@"xc"] seletedIcon:[UIImage imageNamed:@"xc_h"]],
+        [[UIViewController alloc] initWithTitle:@"我的" normalIcon:[UIImage imageNamed:@"my"] seletedIcon:[UIImage imageNamed:@"my_h"]]
     ];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
