@@ -6,7 +6,9 @@
 //  Copyright © 2016年 stone. All rights reserved.
 //
 
-#import "SNTabBarController.h"
+//#import "SNTabBarController.h"
+
+#import "SNEasywayBuild.h"
 @interface SNTempTabBarController : SNTabBarController
 
 @end

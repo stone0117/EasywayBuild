@@ -403,7 +403,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasywayBuild",
 				);
-				GCC_PREFIX_HEADER = /Users/stone/localsvn/WORKFOLDER/SNCATEGORY_2.0/SNPrefix.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = EasywayBuild/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stone.EasywayBuild;
@@ -419,7 +419,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasywayBuild",
 				);
-				GCC_PREFIX_HEADER = /Users/stone/localsvn/WORKFOLDER/SNCATEGORY_2.0/SNPrefix.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = EasywayBuild/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stone.EasywayBuild;
@@ -488,6 +488,7 @@
 				8E12C6ED1D19603F002D437F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E12C7341D19AA30002D437F /* Build configuration list for PBXNativeTarget "SNEasywayBuild" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +497,7 @@
 				8E12C7361D19AA30002D437F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
