@@ -107,12 +107,47 @@
     }
 }
 //=========  ============================ stone 🐳 ===========/
+
+//- (NSArray *)getPropertyNames:(NSString *)string {
+//    // 遍历模型中属性
+//    unsigned int count = 0;
+//    // 取出模型中所有属性
+//    Ivar * ivars = class_copyIvarList(NSClassFromString(string), &count);
+//    
+//    NSMutableArray * propertyNameList = [NSMutableArray array];
+//    // 遍历模型中所有属性
+//    for (int i = 0; i < count; i++) {
+//        // 取出属性
+//        Ivar ivar = ivars[i];
+//        // 获取属性名称（加下划线的属性名称）
+//        NSString * ivarName = @(ivar_getName(ivar));
+//        // 截取属性名称（取出下划线的属性名称）
+//        ivarName = [ivarName substringFromIndex:1];
+//        
+//        //        NSLog(@"%@",ivarName);
+//        [propertyNameList addObject:ivarName];
+//    }
+//    return propertyNameList;
+//}
+
+//=========  ============================ stone 🐳 ===========/
 #pragma mark - 手势代理方法 <UIGestureRecognizerDelegate>
 // 是否开始触发手势
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
     // 判断下当前控制器是否是跟控制器
+    if (self.viewControllers.count <= 1) {
+        return NO;
+    }
+    
+//    NSLog(@"%@",[self getPropertyNames:@"UINavigationController"]);
+    
+    if ([[self valueForKey:@"_isTransitioning"] boolValue]) {
+        
+        return NO;
+    }
 
-    return (self.topViewController != [self.viewControllers firstObject]);
+    return YES;
+    
 }
 
 // self -> 导航控制器
